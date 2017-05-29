@@ -37,7 +37,8 @@ def GenerateDB(image, label, name):
     print
     'DB: ', name
     if not os.path.exists(name):
-        syscall = "/usr/local/binaries/make_mnist_db --channel_first --db leveldb --image_file " + image + " --label_file " + label + " --output_file " + name
+        syscall = "/usr/local/binaries/make_mnist_db --channel_first --db leveldb --image_file " \
+                  + image + " --label_file " + label + " --output_file " + name
         print
         "Creating database with: ", syscall
         os.system(syscall)
